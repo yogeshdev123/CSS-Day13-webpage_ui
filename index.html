@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    doubt:
+    when height of the img is 0px every item reside in grid disappeared except the item7 -->
+    <style>
+    [class*=bar]{
+        border: 2px solid;
+        margin: 5px;
+        width: 15px;
+
+    }
+    .fixed{
+        display:flex;
+        justify-content: space-around;
+        font-size: 24px;
+        margin-bottom: 50px;
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        background-color: white;
+        padding: 15px;
+    }
+    .main{
+        margin-top: 100px;
+    }
+
+    [class*=item] img{
+        height: 400px;
+    }
+    .para{
+        
+        font-size: 24px;
+    }
+    [class*=item]{
+        text-align: center;
+        /* border: solid; */
+        width: 265px;
+    }
+    .grid{
+        display: grid;
+        width: 90vw;
+        margin: auto;
+        justify-content:center ;
+        grid-template-columns: repeat(auto-fit,250px);
+        grid-template-rows: repeat(auto-fit,600px);
+        gap: 40px;
+    }
+    .links a{
+           display: inline-block;
+           padding: 10px;
+           text-decoration: none;
+           color: black;
+    } 
+    .links .anchor{
+        background-color: black;
+        color: white;
+    }
+    .links .anchor:hover{
+        background-color: rgb(110, 106, 106);
+        color: black;
+    }
+    .links a:hover{
+        background-color: black;
+        color: white;
+    }
+    .links{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about{
+        /* border: solid; */
+        width: 80vw;
+        margin: auto;
+        padding-bottom: 30px;
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+    }
+    span{
+        color: red;
+    }
+    .name{
+        text-align: center;
+        font-size: 14px
+    }
+    .footer [class*="child"]{
+        font-size: 22px;
+    }
+    
+</style>
+<style>
+    .fle{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 6px;
+        
+        
+    }
+    .fle div{
+        font-size: 12px;
+        
+        padding: 3px;
+        background-color: grey;
+        color: white;
+        text-align: center;
+    }
+    .footer{
+        width: 80vw;
+        
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    .hov:hover{
+        background-color: rgb(154, 150, 150);
+    }
+    .footer>div{
+       width: 290px;
+        /* border: solid; */
+    }
+    
+    </style>
+
+</head>
+<body>
+    <div class="fixed">
+        <div >
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+        </div>
+        <div><span style="color: red;">My</span> Food</div>
+        <div style="margin-left: 0px;">Mail</div>
+    </div>
+    <div class="main">
+    <div style="padding-bottom: 30px;">
+    <div class="grid">
+        <div class="item1">
+            <img src="./sandwich.jpg" alt="" height="400">
+            <p class="para">The Perfect Sandwich, A Real NYC Classic</p>
+            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="item2">
+            <img src="./steak.jpg" alt="">
+            <p class="para">Let Me Tell You About This Steak</p>
+            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="item3">
+            <img src="./cherries.jpg" alt="">
+            <p class="para">Cherries, interrupted</p>
+            <p style="margin-top: -15px;">Lorem ipsum text praesent tincidunt ipsum lipsum.
+
+                <br><span style="display: inline-block;margin-top: 15px;">What else?</span></p>
+        </div>
+        <div class="item4">
+            <img src="./wine.jpg" alt="">
+            <p class="para">Once Again, Robust Wine and Vegetable Pasta</p>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="item5">
+            <img src="./popsicle.jpg" alt="">
+            <p class="para">All I Need Is a Popsicle</p>
+            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="item6">
+            <img src="./salmon.jpg" alt="">
+            <p class="para">Salmon For Your Skin</p>
+            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="item7">
+            <img src="./sandwich.jpg" alt="">
+            <p class="para">The Perfect Sandwich, A Real Classic</p>
+            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+        <div class="item8">
+            <img src="./croissant.jpg" alt="">
+            <p class="para">Le French</p>
+            <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+    </div>
+    <div class="links">
+        <a href="#"><</a><a href="#" class="anchor">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">></a>
+    </div></div>
+    <div class="about">
+
+            <p style="text-align: center;" class="para">About Me,The Food Man</p>
+            <div style="display: flex;justify-content: center;align-items: center;">
+                <img src="./chef.jpg" alt="" style="height: 30vw;">
+            </div>
+        
+        <div class="name"><h2><span>I</span> am Who <span>I</span> am!</h2></div>
+        <div class="name"><p>With Passion For Real, Good Food</p></div>
+        <div class="name" style="width: 90%;margin: auto;font-size: 16px;">
+            <p >Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p></div>
+    </div>
+    <div class="footer">
+        <div >
+        <p class="child">FOOTER</p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p>Powered by <a style="text-decoration: none; color: black;" href="https://10000coders.co/"><span style="color: orange;">10,000</span> Coders</a></p>
+        </div>
+        <div >
+            <p class="child">BLOG POSTS</p>
+
+                <div style="display: flex;border-bottom:1px solid;padding: 15px;" class="hov">
+                    <div style="background-image: url(./workshop.jpg);height: 50px;width: 50px;background-size: cover;"></div>
+                    <div style="margin-left: 15px;"><div><p style="display: inline;font-size: 19px; ">Lorem</p></div>
+                    <div style="margin-top: 10px;"><p style="display: inline;">Sed mattis nunc</p></div></div>
+                </div>
+                <div style="display: flex;border-bottom: 1px solid;padding: 15px;" class="hov">
+                    <div style="background-image: url(./gondol.jpg);height: 50px;width: 50px;background-size: cover;"></div>
+                    <div style="margin-left: 15px;"><div><p style="display: inline;font-size: 19px;">Ipsum</p></div>
+                    <div style="margin-top: 10px;"><p style="display: inline;">Praes tinci sed</p></div></div>
+                </div>
+            
+        </div>
+        <div>
+            <p class="child">POPULAR TAGS</p>
+            <div class="fle" >
+                <div style="transform: scale(1.1);background-color: black;">Travel</div>
+                <div>New York</div>
+                <div>Dinner</div>
+                <div>Salmon</div>
+                <div>France</div>
+                <div>Drinks</div>
+                <div>Ideas</div>
+                <div>Flavors</div>
+                <div>Cusine</div>
+                <div>Chicken</div>
+                <div>Dressing</div>
+                <div>Fried</div>
+                <div>Fish</div>
+                <div>Duck</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
